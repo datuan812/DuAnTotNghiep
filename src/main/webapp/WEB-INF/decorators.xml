@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+    <!-- Any urls that are excluded will never be decorated by Sitemesh -->
+    <excludes>
+        <pattern>/api*</pattern>
+    </excludes>
+
+    <!-- apply Sitemesh default template -->
+    <decorator name="admin" page="admin.jsp">
+        <pattern>/admin*</pattern>
+    </decorator>
+
+    <decorator name="web" page="web.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+
+    <decorator name="login" page="login.jsp">
+        <pattern>/login</pattern>
+    </decorator>
+
+    <decorator name="login" page="login.jsp">
+        <pattern>/register</pattern>
+    </decorator>
+
+    <decorator name="login" page="login.jsp">
+        <pattern>/forgotpassword</pattern>
+    </decorator>
+
+    <decorator name="login" page="login.jsp">
+        <pattern>/changePassword</pattern>
+    </decorator>
+
+    <decorator name="web403" page="web403.jsp">
+        <pattern>/403</pattern>
+    </decorator>
+
+    <decorator name="admin403" page="admin403.jsp">
+        <pattern>/admin/403</pattern>
+    </decorator>
+
+    <decorator name="thongtinWeb" page="thongtinWeb.jsp">
+        <pattern>/web*</pattern>
+    </decorator>
+
+    <decorator name="vidientu" page="thongtinWeb.jsp">
+        <pattern>/vi-dien-tu</pattern>
+    </decorator>
+
+    <decorator name="naptien" page="thongtinWeb.jsp">
+        <pattern>/vi-dien-tu/nap-tien</pattern>
+    </decorator>
+
+    <decorator name="doidiem" page="thongtinWeb.jsp">
+        <pattern>/vi-dien-tu/doi-diem</pattern>
+    </decorator>
+
+    <decorator name="doi-mat-khau" page="thongtinWeb.jsp">
+        <pattern>/doi-mat-khau</pattern>
+    </decorator>
+
+    <decorator name="thong-tin-tich-diem" page="thongtinWeb.jsp">
+        <pattern>/thong-tin-tich-diem</pattern>
+    </decorator>
+
+    <decorator name="thu3" page="thu3.jsp">
+        <pattern>/thu3</pattern>
+    </decorator>
+
+    <decorator name="xuat-hoa-don" page="xuat-hoa-don.jsp">
+        <pattern>/admin/hoa-don/printf/**</pattern>
+    </decorator>
+
+    <decorator name="tra-hang" page="tra-hang.jsp">
+        <pattern>/admin/tra-hang</pattern>
+    </decorator>
+</decorators>

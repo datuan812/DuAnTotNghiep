@@ -1,0 +1,276 @@
+.a {
+    color: black;
+}
+.khung {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 20px;
+}
+
+.menu {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 10px;
+}
+
+.menu ul li a {
+    font-size: 18px;
+    color: black;
+    padding-bottom: 15px;
+}
+.menu ul li a:hover {
+    color: #D19C97;
+}
+.menu ul li a.active {
+    color: #D19C97;
+    border-bottom: 2px solid #D19C97;
+}
+
+/*input search*/
+.inputTT {
+    background-color: #f5f5f5;
+    color: #242424;
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+}
+
+input:focus {
+    border-bottom: 2px solid #D19C97;
+    border-radius: 4px 4px 2px 2px;
+}
+
+input:hover {
+    outline: 1px solid lightgrey;
+}
+
+/*ngôi sao */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.3rem;
+    --stroke: #666;
+    --fill: #ffc73a;
+}
+
+.rating input {
+    appearance: unset;
+}
+
+.rating label {
+    cursor: pointer;
+}
+
+.rating svg {
+    width: 2rem;
+    height: 2rem;
+    overflow: visible;
+    fill: transparent;
+    stroke: var(--stroke);
+    stroke-linejoin: bevel;
+    stroke-dasharray: 12;
+    animation: idle 4s linear infinite;
+    transition: stroke 0.2s, fill 0.5s;
+}
+
+@keyframes idle {
+    from {
+        stroke-dashoffset: 24;
+    }
+}
+
+.rating label:hover svg {
+    stroke: var(--fill);
+}
+
+.rating input:checked ~ label svg {
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+}
+
+@keyframes yippee {
+    0% {
+        transform: scale(1);
+        fill: var(--fill);
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke: var(--stroke);
+        stroke-dasharray: 10;
+        stroke-width: 1px;
+        stroke-linejoin: bevel;
+    }
+
+    30% {
+        transform: scale(0);
+        fill: var(--fill);
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke: var(--stroke);
+        stroke-dasharray: 10;
+        stroke-width: 1px;
+        stroke-linejoin: bevel;
+    }
+
+    30.1% {
+        stroke: var(--fill);
+        stroke-dasharray: 0;
+        stroke-linejoin: miter;
+        stroke-width: 8px;
+    }
+
+    60% {
+        transform: scale(1.2);
+        fill: var(--fill);
+    }
+}
+
+
+
+/*cart*/
+.color-selector {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+label {
+    margin-right: 10px;
+}
+
+.color-buttons {
+    display: flex;
+}
+
+.color-button {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #fff;
+    margin-right: 10px;
+    transition: border-color 0.3s; /* Thêm hiệu ứng transition cho border-color */
+}
+
+.color-button:hover {
+    border-color: red;
+}
+
+.color-button.active {
+    border-color: red;
+}
+
+.size-button {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #fff;
+    margin-right: 10px;
+    transition: border-color 0.3s; /* Thêm hiệu ứng transition cho border-color */
+}
+.size-button:hover {
+    border-color: red;
+}
+
+.size-button.active {
+    border-color: red;
+}
+
+
+.color-button1 {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #fff;
+    margin-right: 10px;
+    transition: border-color 0.3s; /* Thêm hiệu ứng transition cho border-color */
+}
+
+.color-button1:hover {
+    border-color: red;
+}
+
+.color-button1.active {
+    border-color: red;
+}
+
+.size-button1 {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #fff;
+    margin-right: 10px;
+    transition: border-color 0.3s; /* Thêm hiệu ứng transition cho border-color */
+}
+.size-button1:hover {
+    border-color: red;
+}
+
+.size-button1.active {
+    border-color: red;
+}
+
+
+
+/*input tiền*/
+.input-wrapper1 {
+    position: relative;
+}
+
+.input-box1 {
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    color: #000000;
+    /*width: 100%;*/
+    background-color: transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.underline1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: green;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.input-box1:focus {
+    border-color: green;
+    outline: none;
+}
+
+.input-box1:focus + .underline1 {
+    transform: scaleX(1);
+}
+
+.hovers :hover{
+    color: #D19C97;
+}
+
+/*disable cart*/
+.special-card {
+    background-color: rgba(245, 245, 245, 1);
+    opacity: .4;
+}
+
+/*css ảnh hết hàng*/
+.img-container {
+    position: relative;
+}
+
+.out-of-stock-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
